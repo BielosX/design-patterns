@@ -6,8 +6,8 @@ public class EmailMessageSender extends MessageSender {
         if (message.getDestination() == Destination.EMAIL) {
             System.out.println("Message " + message + " sent by Email");
         }
-        if (this.getNext() != null) {
-            this.getNext().sendMessage(message);
+        if (this.next != null) {
+            this.next.sendMessage(message);
         }
     }
 }

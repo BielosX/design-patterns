@@ -6,8 +6,8 @@ public class QueueMessageSender extends MessageSender {
         if (message.getDestination() == Destination.QUEUE) {
             System.out.println("Message " + message + " sent to Queue");
         }
-        if (this.getNext() != null) {
-            this.getNext().sendMessage(message);
+        if (this.next != null) {
+            this.next.sendMessage(message);
         }
     }
 }

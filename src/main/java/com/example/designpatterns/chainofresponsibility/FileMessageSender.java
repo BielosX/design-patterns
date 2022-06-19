@@ -6,8 +6,8 @@ public class FileMessageSender extends MessageSender {
         if (message.getDestination() == Destination.FILE) {
             System.out.println("Message " + message + " saved to file");
         }
-        if (this.getNext() != null) {
-            this.getNext().sendMessage(message);
+        if (this.next != null) {
+            this.next.sendMessage(message);
         }
     }
 }

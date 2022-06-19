@@ -3,8 +3,7 @@ package com.example.designpatterns.chainofresponsibility;
 import lombok.Getter;
 
 public abstract class MessageSender {
-    @Getter
-    private MessageSender next;
+    protected MessageSender next;
 
     public void setNext(MessageSender next) {
         if (this.next == null) {
